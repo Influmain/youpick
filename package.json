@@ -1,0 +1,13 @@
+{
+  "name": "bucket-holdings-website",
+  "version": "1.0.0",
+  "description": "버킷홀딩스 공식 웹사이트",
+  "main": "s-tockplus-replica.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["investment", "ai", "trading"],
+  "author": "버킷홀딩스",
+  "license": "MIT"
+}
