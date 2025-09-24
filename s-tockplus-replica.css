@@ -305,6 +305,200 @@ body {
     opacity: 0.9;
 }
 
+/* CEO Message Section */
+.ceo-message-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.ceo-message-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="m0 0h60v60h-60z" fill="none" stroke="%23e2e8f0" stroke-width="1" opacity="0.3"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    z-index: 0;
+}
+
+.ceo-message-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    padding: 60px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.ceo-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.ceo-avatar {
+    position: relative;
+}
+
+.ceo-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2563eb;
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.ceo-photo:hover {
+    transform: scale(1.05);
+}
+
+.ceo-avatar::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #2563eb, #1d4ed8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.ceo-title h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ceo-name {
+    font-size: 1.3rem;
+    color: #64748b;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ceo-message-text {
+    position: relative;
+}
+
+.ceo-message-text::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    font-size: 8rem;
+    color: #2563eb;
+    opacity: 0.1;
+    font-family: serif;
+    line-height: 1;
+}
+
+.ceo-message-text blockquote {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #334155;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+.ceo-signature {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.ceo-signature span {
+    font-size: 1.1rem;
+    color: #2563eb;
+    font-weight: 600;
+    font-style: italic;
+    position: relative;
+}
+
+.ceo-signature span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transform: translateY(-50%);
+}
+
+/* Mobile responsiveness for CEO section */
+@media (max-width: 768px) {
+    .ceo-message-content {
+        padding: 40px 30px;
+        margin: 0 20px;
+    }
+    
+    .ceo-intro {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .ceo-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .ceo-title h3 {
+        font-size: 1.8rem;
+    }
+    
+    .ceo-message-text blockquote {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    .ceo-message-text::before {
+        font-size: 6rem;
+        top: -15px;
+        left: -20px;
+    }
+    
+    .ceo-signature span::before {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .ceo-message-content {
+        padding: 30px 20px;
+    }
+    
+    .ceo-message-text blockquote {
+        font-size: 1rem;
+    }
+    
+    .ceo-title h3 {
+        font-size: 1.6rem;
+    }
+}
+
 /* AlphaRoad Section */
 .alpharoad-section {
     padding: 100px 0;
